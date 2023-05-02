@@ -1,0 +1,27 @@
+AI types:
+Based on capabilities:
+weak
+general
+strong
+Based on functionality
+reactive machine
+limited memory
+theory of mind
+self awareness
+
+BFS: complete, optimal, O(b^d)
+
+DFS: complete, not optimal
+
+UCS: O(b^(1+c*/ε)), complete and optimal
+
+GBFS: incomplete, not optimal
+
+A* : O(b^d) d-> depth ; Complete: cost fixed, finite branching; Optimal: Admissible and consistency heuristic function
+
+
+AGENTS: actuators, effectors, sensors
+simple reflex agent: fully observable env. 
+model based: model, internal state, partially observable env.
+goal based: goals
+problem solving: type of goal based, problem components: initial state, actions, transition model, goal test, path cost

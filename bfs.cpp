@@ -29,12 +29,13 @@ public:
       bool *visited = new bool[V];
       for (int i = 0; i < V; i++)
          visited[i] = false;
+
       queue<int> q;
       // Mark the current node as visited and enqueue it
       visited[s] = true;
       q.push(s);
       // 'i' will be used to get all adjacent vertices of a vertex
-      vector<int>::iterator i;
+      // vector<int>::iterator i;
       while (!q.empty())
       { // Dequeue a vertex from queue and print it
          s = q.front();
@@ -43,7 +44,7 @@ public:
          // Get all adjacent vertices of the dequeued vertex s
          // If an adjacent vertex has not been visited, then mark it
          // visited and enqueue it
-         for (i = adj[s].begin(); i != adj[s].end(); ++i)
+         for (auto i = adj[s].begin(); i != adj[s].end(); ++i)
          {
             if (!visited[*i])
             {
@@ -67,9 +68,7 @@ int main()
    g.addEdge(1, 4);
    g.addEdge(2, 4);
    g.addEdge(3, 4);
-   cout << endl
-        << "BFS Traversal (starting from vertex 2): " << endl;
+   cout << "BFS Traversal (starting from vertex 0): " << endl;
    g.BFS(0);
-   cout << endl;
    return 0;
 }

@@ -20,11 +20,7 @@ ALGORITHM
 			 successor.g = q.g + distance between
 										successor and q
 			 successor.h = distance from goal to
-			 successor (This can be done using many
-			 ways, we will discuss three heuristics-
-			 Manhattan, Diagonal and Euclidean
-			 Heuristics)
-
+			 successor
 			 successor.f = successor.g + successor.h
 
 		  iii) if a node with the same position as

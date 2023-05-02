@@ -55,8 +55,8 @@ int main()
    addedge(8, 10, 6);
    addedge(9, 11, 1);
    addedge(9, 12, 10);
-
    addedge(9, 13, 2);
+
    int source = 0;
    int target = 9;
    best_first_search(source, target, v);

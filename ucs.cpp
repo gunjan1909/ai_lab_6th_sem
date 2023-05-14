@@ -52,34 +52,28 @@ vector<int> uniform_cost_search(vector<int> goal, int start)
 }
 int main()
 {
-   graph.resize(7);
+   graph.resize(8);
    graph[0].push_back(1);
+   graph[0].push_back(2);
    graph[0].push_back(3);
-   graph[3].push_back(1);
-   graph[3].push_back(6);
-   graph[3].push_back(4);
-   graph[1].push_back(6);
-   graph[4].push_back(2);
-   graph[4].push_back(5);
-   graph[2].push_back(1);
-   graph[5].push_back(2);
-   graph[5].push_back(6);
-   graph[6].push_back(4);
-   cost[make_pair(0, 1)] = 2;
-   cost[make_pair(0, 3)] = 5;
-   cost[make_pair(1, 6)] = 1;
-   cost[make_pair(3, 1)] = 5;
-   cost[make_pair(3, 6)] = 6;
-   cost[make_pair(3, 4)] = 2;
-   cost[make_pair(2, 1)] = 4;
-   cost[make_pair(4, 2)] = 4;
-   cost[make_pair(4, 5)] = 3;
-   cost[make_pair(5, 2)] = 6;
-   cost[make_pair(5, 6)] = 3;
-   cost[make_pair(6, 4)] = 7;
+   graph[1].push_back(4);
+   graph[2].push_back(5);
+   graph[3].push_back(7);
+   graph[4].push_back(6);
+   graph[5].push_back(7);
+   graph[6].push_back(7);
+   cost[make_pair(0, 1)] = 3;
+   cost[make_pair(0, 2)] = 2;
+   cost[make_pair(0, 3)] = 1;
+   cost[make_pair(1, 4)] = 6;
+   cost[make_pair(2, 5)] = 4;
+   cost[make_pair(3, 7)] = 20;
+   cost[make_pair(4, 6)] = 1;
+   cost[make_pair(6, 7)] = 1;
+   cost[make_pair(5, 7)] = 8;
    vector<int> goal; // set the goal there can be multiple goal states
-   goal.push_back(6);
+   goal.push_back(7);
    vector<int> answer = uniform_cost_search(goal, 0);
-   cout << "Minimum cost from 0 to 6 is = " << answer[0] << endl;
+   cout << "Minimum cost from 0 to 7 is = " << answer[0] << endl;
    return 0;
 }
